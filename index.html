@@ -100,8 +100,8 @@
                 <button onclick="switchTab('seserahan')" id="btn-seserahan" class="menu-btn w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white transition">
                     <i class="fa-solid fa-box-open w-4"></i> Seserahan & Hantaran
                 </button>
-                <button onclick="switchTab('ffa-decor')" id="btn-ffa-decor" class="menu-btn w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white transition">
-                    <i class="fa-solid fa-seedling w-4"></i> Karangan Bunga FFA
+                <button onclick="switchTab('fn-decor')" id="btn-fn-decor" class="menu-btn w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white transition">
+                    <i class="fa-solid fa-seedling w-4"></i> Karangan Bunga FN
                 </button>
                 <button onclick="switchTab('rundown')" id="btn-rundown" class="menu-btn w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white transition">
                     <i class="fa-solid fa-clock w-4"></i> Rundown Hari-H
@@ -308,17 +308,17 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4" id="seserahan-grid-container"></div>
         </section>
 
-        <!-- ==================== TAB: KARANGAN BUNGA FFA ==================== -->
-        <section id="tab-ffa-decor" class="tab-content hidden space-y-4">
+        <!-- ==================== TAB: KARANGAN BUNGA FN ==================== -->
+        <section id="tab-fn-decor" class="tab-content hidden space-y-4">
             <div class="flex justify-between items-center">
                 <div>
-                    <h2 class="font-serif text-xl font-bold text-slate-800">Manajemen Karangan Bunga & Dekorasi (FFA)</h2>
-                    <p class="text-xs text-slate-500">Integrasikan kebutuhan bunga pernikahan langsung menggunakan katalog internal FFA Flower Arrangement.</p>
+                    <h2 class="font-serif text-xl font-bold text-slate-800">Manajemen Karangan Bunga & Dekorasi (FN)</h2>
+                    <p class="text-xs text-slate-500">Integrasikan kebutuhan bunga pernikahan langsung menggunakan katalog internal FN Flower Arrangement.</p>
                 </div>
-                <button onclick="openModal('modal-add-ffa')" class="bg-brand-primary text-white px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-brand-secondary"><i class="fa-solid fa-plus mr-1"></i>Tambah Pesanan Bunga</button>
+                <button onclick="openModal('modal-add-fn')" class="bg-brand-primary text-white px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-brand-secondary"><i class="fa-solid fa-plus mr-1"></i>Tambah Pesanan Bunga</button>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="ffa-grid-container"></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="fn-grid-container"></div>
         </section>
 
         <!-- ==================== TAB: RUNDOWN HARI H ==================== -->
@@ -429,16 +429,16 @@
         </div>
     </div>
 
-    <!-- Modal: Tambah Pesanan FFA -->
-    <div id="modal-add-ffa" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center z-50 hidden p-4">
+    <!-- Modal: Tambah Pesanan FN -->
+    <div id="modal-add-fn" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center z-50 hidden p-4">
         <div class="bg-white rounded-xl p-5 w-full max-w-sm shadow-xl space-y-4">
-            <div class="flex justify-between items-center"><h4 class="font-bold text-sm">Tambah Pesanan Bunga FFA</h4><button onclick="closeModal('modal-add-ffa')"><i class="fa-solid fa-xmark text-slate-400"></i></button></div>
+            <div class="flex justify-between items-center"><h4 class="font-bold text-sm">Tambah Pesanan Bunga FN</h4><button onclick="closeModal('modal-add-fn')"><i class="fa-solid fa-xmark text-slate-400"></i></button></div>
             <div class="space-y-3">
-                <input type="text" id="in-ffa-item" class="w-full border border-slate-200 rounded-lg p-2 text-xs focus:outline-none focus:ring-1 focus:ring-brand-primary" placeholder="Nama Jenis Karangan Bunga (e.g. Standing Flower, Bouquet)">
-                <input type="number" id="in-ffa-cost" class="w-full border border-slate-200 rounded-lg p-2 text-xs focus:outline-none focus:ring-1 focus:ring-brand-primary" placeholder="Estimasi Biaya Produksi (Rp)">
-                <input type="text" id="in-ffa-desc" class="w-full border border-slate-200 rounded-lg p-2 text-xs focus:outline-none focus:ring-1 focus:ring-brand-primary" placeholder="Catatan Khusus (e.g. Mawar Merah & Putih)">
+                <input type="text" id="in-fn-item" class="w-full border border-slate-200 rounded-lg p-2 text-xs focus:outline-none focus:ring-1 focus:ring-brand-primary" placeholder="Nama Jenis Karangan Bunga (e.g. Standing Flower, Bouquet)">
+                <input type="number" id="in-fn-cost" class="w-full border border-slate-200 rounded-lg p-2 text-xs focus:outline-none focus:ring-1 focus:ring-brand-primary" placeholder="Estimasi Biaya Produksi (Rp)">
+                <input type="text" id="in-fn-desc" class="w-full border border-slate-200 rounded-lg p-2 text-xs focus:outline-none focus:ring-1 focus:ring-brand-primary" placeholder="Catatan Khusus (e.g. Mawar Merah & Putih)">
             </div>
-            <button onclick="actionAddFFA()" class="w-full py-2 bg-brand-primary text-white text-xs font-bold rounded-lg transition hover:bg-brand-secondary">Tambahkan Item Bunga</button>
+            <button onclick="actionAddFN()" class="w-full py-2 bg-brand-primary text-white text-xs font-bold rounded-lg transition hover:bg-brand-secondary">Tambahkan Item Bunga</button>
         </div>
     </div>
 
@@ -527,8 +527,8 @@
             { id: 2, item: "Perlengkapan Ibadah & Al-Qur'an", cost: 1500000, completed: false }
         ];
 
-        // Custom Data Store untuk Bisnis Karangan Bunga FFA
-        let ffaList = [
+        // Custom Data Store untuk Bisnis Karangan Bunga FN
+        let fnList = [
             { id: 1, item: "Grand Backdrop Floral Arrangement", cost: 8500000, desc: "Panggung Utama - Tema Pastel White-Rose", status: "Produksi" },
             { id: 2, item: "Aisle Standing Flower (6 Pcs)", cost: 3000000, desc: "Jalur Pengantin - Fresh Hydrangeas & Lily", status: "Siap" }
         ];
@@ -568,7 +568,7 @@
             renderGuests();
             renderVendors();
             renderSeserahan();
-            renderFFA();
+            renderFN();
             renderRundown();
             renderVault();
         }
@@ -765,17 +765,17 @@
             });
         }
 
-        // Rendering Fitur Karangan Bunga FFA
-        function renderFFA() {
-            const container = document.getElementById('ffa-grid-container');
+        // Rendering Fitur Karangan Bunga FN
+        function renderFN() {
+            const container = document.getElementById('fn-grid-container');
             container.innerHTML = '';
-            ffaList.forEach(f => {
+            fnList.forEach(f => {
                 let badgeColor = f.status === 'Siap' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-850';
                 container.innerHTML += `
                     <div class="bg-white p-4 rounded-xl border border-emerald-100 shadow-2xs flex flex-col justify-between text-xs gap-3">
                         <div>
                             <div class="flex justify-between items-center mb-2">
-                                <span class="text-[9px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-bold tracking-wide">FFA LOGISTICS</span>
+                                <span class="text-[9px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-bold tracking-wide">FN LOGISTICS</span>
                                 <span class="text-[10px] px-2 py-0.5 rounded-full font-semibold ${badgeColor}">${f.status}</span>
                             </div>
                             <h4 class="font-bold text-slate-850 text-sm">${f.item}</h4>
@@ -784,8 +784,8 @@
                         <div class="flex items-center justify-between border-t border-slate-100 pt-2.5">
                             <span class="font-bold text-emerald-600">Rp ${f.cost.toLocaleString('id-ID')}</span>
                             <div class="flex gap-1">
-                                <button onclick="toggleFFAStatus(${f.id})" class="text-[10px] bg-slate-50 hover:bg-slate-100 px-2 py-1 rounded border border-slate-200">Ubah Status</button>
-                                <button onclick="deleteFFA(${f.id})" class="text-rose-500 hover:bg-rose-50 p-1 rounded-lg"><i class="fa-regular fa-trash-can"></i></button>
+                                <button onclick="toggleFNStatus(${f.id})" class="text-[10px] bg-slate-50 hover:bg-slate-100 px-2 py-1 rounded border border-slate-200">Ubah Status</button>
+                                <button onclick="deleteFN(${f.id})" class="text-rose-500 hover:bg-rose-50 p-1 rounded-lg"><i class="fa-regular fa-trash-can"></i></button>
                             </div>
                         </div>
                     </div>
@@ -916,21 +916,21 @@
         function toggleSeserahan(id) { let s = seserahanList.find(x => x.id === id); if(s) { s.completed = !s.completed; renderAll(); } }
         function deleteSeserahan(id) { seserahanList = seserahanList.filter(s => s.id !== id); renderAll(); }
 
-        // Actions untuk Fitur Bunga FFA
-        function actionAddFFA() {
-            let item = document.getElementById('in-ffa-item').value;
-            let cost = parseFloat(document.getElementById('in-ffa-cost').value) || 0;
-            let desc = document.getElementById('in-ffa-desc').value || "-";
+        // Actions untuk Fitur Bunga FN
+        function actionAddFN() {
+            let item = document.getElementById('in-fn-item').value;
+            let cost = parseFloat(document.getElementById('in-fn-cost').value) || 0;
+            let desc = document.getElementById('in-fn-desc').value || "-";
             if(item) {
-                ffaList.push({ id: Date.now(), item: item, cost: cost, desc: desc, status: "Produksi" });
-                closeModal('modal-add-ffa'); renderAll();
+                fnList.push({ id: Date.now(), item: item, cost: cost, desc: desc, status: "Produksi" });
+                closeModal('modal-add-fn'); renderAll();
             }
         }
-        function toggleFFAStatus(id) {
-            let f = ffaList.find(x => x.id === id);
+        function toggleFNStatus(id) {
+            let f = fnList.find(x => x.id === id);
             if(f) { f.status = f.status === 'Produksi' ? 'Siap' : 'Produksi'; renderAll(); }
         }
-        function deleteFFA(id) { ffaList = ffaList.filter(f => f.id !== id); renderAll(); }
+        function deleteFN(id) { fnList = fnList.filter(f => f.id !== id); renderAll(); }
 
         function actionAddRundown() {
             let time = document.getElementById('in-r-time').value;
